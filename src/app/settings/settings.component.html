@@ -1,0 +1,68 @@
+<div class="settings-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+
+        <h1 class="text-xs-center">Tus Opciones</h1>
+
+        <list-errors [errors]="errors"></list-errors>
+
+        <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                type="text"
+                placeholder="URL de tu foto de perfil"
+                formControlName="image" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="text"
+                placeholder="Usuario"
+                formControlName="username" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <textarea class="form-control form-control-lg"
+                rows="8"
+                placeholder="Descripción acerca de ti..."
+                formControlName="bio">
+              </textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="email"
+                placeholder="Email"
+                formControlName="email" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="password"
+                placeholder="Nueva contraseña"
+                formControlName="password" />
+            </fieldset>
+
+            <button class="btn btn-lg btn-primary pull-xs-right"
+              type="submit">
+              Actualiza tus opciones
+            </button>
+
+          </fieldset>
+        </form>
+
+        <!-- Line break for logout button -->
+        <hr />
+
+        <button class="btn btn-outline-danger"
+          (click)="logout()">
+          Salir
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
