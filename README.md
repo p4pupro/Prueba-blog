@@ -1,3 +1,3 @@
-# ![Angular 2 Example App](logo.png)
+# ![Angular 2 Example App]
 
 sample blog
